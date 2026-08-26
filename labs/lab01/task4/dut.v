@@ -9,5 +9,5 @@ module dut (
 
   // TODO: Implement XOR gate
   // Hint: Use continuous assignment (assign) with the Boolean XOR operator (^)
-  
+  assign y = a^b;
 endmodule
