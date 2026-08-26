@@ -28,7 +28,11 @@ module tb;
     // Example:
     // a = 1'b0; #10;
     // if (y !== 1'b1) $display("Error");
-    
+    a = 1'b0; #10;
+    if (y != 1'b1) $display("Error"); else $display("%b", y);
+
+    a = 1'b1; #10;
+    if (y != 1'b0) $display("Error"); else $display("%b", y);
     $finish;
   end
 
