@@ -5,8 +5,6 @@ module dut (
   input  wire a,
   output wire y
 );
-
-  // TODO: Implement NOT gate
   // Hint: Use continuous assignment (assign) with the Boolean NOT operator (~)
   assign y = ~a;
 endmodule
