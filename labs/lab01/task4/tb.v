@@ -50,5 +50,4 @@ module tb;
     if (y != 1'b0) $display("Error"); else $display("%b", y);
     $finish;
   end
-
 endmodule
