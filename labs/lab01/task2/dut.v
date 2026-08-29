@@ -6,8 +6,6 @@ module dut (
   input  wire b,
   output wire y
 );
-
-  // TODO: Implement OR gate
   // Hint: Use continuous assignment (assign) with the Boolean OR operator (|)
   assign y = a | b;
 endmodule
