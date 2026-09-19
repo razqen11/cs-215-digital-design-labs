@@ -14,5 +14,8 @@ module dut (
 
   // TODO: Implement D Flip-Flop logic with synchronous reset
   // Hint: Use an always block sensitive to the rising edge of clk
-
+  always @(posedge clk) begin
+        if (rst) q <= 1'b0;
+        else q <= d;
+  end
 endmodule
