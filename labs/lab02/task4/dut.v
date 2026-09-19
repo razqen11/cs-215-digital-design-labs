@@ -20,4 +20,17 @@ module dut (
   // S=1, R=0 -> Set (q=1)
   // S=1, R=1 -> Invalid/Undefined (usually q = 1'bx or state not changed; let's set q = 1'bx)
 
+  always @(posedge clk) begin
+    if (rst)
+        q <= 1'b0;
+    else if (s == 0 && r == 0)
+        q <= q;
+    else if (s == 0 && r == 1)
+        q <= 1'b0;
+    else if (s == 1 && r == 0)
+        q <= 1'b1;
+    else
+        q <= 1'bx;
+  end
+
 endmodule
