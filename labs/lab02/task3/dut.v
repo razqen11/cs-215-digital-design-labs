@@ -20,4 +20,16 @@ module dut (
   // J=1, K=0 -> Set (q=1)
   // J=1, K=1 -> Toggle
 
+  always @(posedge clk) begin
+    if (rst)
+        q <= 1'b0;
+    else if (j == 0 && k == 0)
+        q <= q;
+    else if (j == 0 && k == 1)
+        q <= 1'b0;
+    else if (j == 1 && k == 0)
+        q <= 1'b1;
+    else
+        q <= ~q;
+  end
 endmodule

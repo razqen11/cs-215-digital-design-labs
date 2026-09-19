@@ -48,7 +48,36 @@ module tb;
     // TODO: Write your test cases here to verify your design
     // Hint: Apply stimulus signals (j, k) and observe outputs (q, q_bar) on clock edges
     
+    j = 0;
+    k = 0;
+    #10;
+
+    j = 1;
+    k = 0;
+    #10;
+
+    j = 0;
+    k = 0;
+    #10;
+
+    j = 0;
+    k = 1;
+    #10;
+
+    j = 1;
+    k = 1;
+    #10;
+
+    #10;
+
+    j = 1;
+    k = 0;
+    #10;
+
+    j = 0;
+    k = 1;
+    #10;
+
     $finish;
   end
-
 endmodule
