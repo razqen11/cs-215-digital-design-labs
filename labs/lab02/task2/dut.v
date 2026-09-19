@@ -11,8 +11,10 @@ module dut (
 
   // Assign q_bar as the negation of q
   assign q_bar = ~q;
-
   // TODO: Implement T Flip-Flop logic with synchronous reset
   // Hint: T = 1 toggles the state on the rising edge of clk; T = 0 holds the state
-
+  always @(posedge clk) begin
+    if (rst) q <= 1'b0;
+    else q <= t ? ~q : q;
+  end
 endmodule
